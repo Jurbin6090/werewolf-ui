@@ -11,15 +11,15 @@ export class GameService {
     this.httpClient = httpClient
   }
 
-  getGames() :Observable{
+  getGames() : Observable<any> {
     return this.httpClient.get(this.server + '/game/list')
   }
 
-  createGame(playerId) :Observable {
-    this.httpClient.post(this.server + '/games' + playerId)
+  createGame(playerId) : Observable<any> {
+    return this.httpClient.post(this.server + '/games' + playerId)
   }
 
-  getPlayers() :Observable {
+  getPlayers() : Observable<any>{
     return this.httpClient.get(this.server + '/player/list')
   }
 }
