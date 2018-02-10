@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
+import {Observable} from "rxjs/Observable";
 
 @Injectable()
 export class GameService {
@@ -10,15 +11,15 @@ export class GameService {
     this.httpClient = httpClient
   }
 
-  getGames(){
+  getGames() :Observable{
     return this.httpClient.get(this.server + '/game/list')
   }
 
-  createGame(playerId) {
+  createGame(playerId) :Observable {
     this.httpClient.post(this.server + '/games' + playerId)
   }
 
-  getPlayers() {
+  getPlayers() :Observable {
     return this.httpClient.get(this.server + '/player/list')
   }
 }

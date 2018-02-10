@@ -7,9 +7,9 @@ import {CharacterListComponent} from './character-list/character-list.component'
 import {CharacterCreateComponent} from './character-create/character-create.component';
 import {PlayerCreateComponent} from './player-create/player-create.component';
 import {PlayerListComponent} from './player-list/player-list.component';
-import {GameListComponent} from './game-list/game-list.component';
-import {GameCreateComponent} from './game-create/game-create.component';
-import {GameCreateService} from "./game-create/game-create.service";
+import {GameListComponent} from './game/game-list/game-list.component';
+import {GameCreateComponent} from './game/game-create/game-create.component';
+import {GameService} from "./game/game.service";
 import {HttpClientModule} from "@angular/common/http";
 
 
@@ -27,7 +27,7 @@ import {HttpClientModule} from "@angular/common/http";
     BrowserModule,
     HttpClientModule
   ],
-  providers: [GameCreateComponent, GameCreateService],
+  providers: [GameCreateComponent, GameService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
