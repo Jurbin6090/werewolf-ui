@@ -20,6 +20,6 @@ export class GameCreateComponent implements OnInit {
   }
 
   create(){
-    this.gameService.create(this.selectedPlayer.id)
+    this.gameService.createGame(this.selectedPlayer.id)
   }
 }
