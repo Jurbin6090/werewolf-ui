@@ -5,8 +5,8 @@
   </thead>
   <tbody>
     <tr *ngFor="let game of games">
-      <td>X</td>
-      <td>game.name</td>
+      <td><a (click)=deleteGame(game.id)>X</a></td>
+      <td>{{game.name}}</td>
     </tr>
   </tbody>
 </table>

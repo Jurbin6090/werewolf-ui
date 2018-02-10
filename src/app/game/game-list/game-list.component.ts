@@ -15,10 +15,15 @@ export class GameListComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.listGames()
   }
 
   listGames(){
     this.gameService.getGames().subscribe(response => this.games = response)
+  }
+
+  deleteGame(id){
+    this.gameService.deleteGame(id)
   }
 
 }

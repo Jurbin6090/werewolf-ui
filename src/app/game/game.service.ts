@@ -22,4 +22,8 @@ export class GameService {
   getPlayers() : Observable<any>{
     return this.httpClient.get(this.server + '/player/list')
   }
+
+  deleteGame(id){
+    return this.httpClient.delete(this.server + '/game/' + id)
+  }
 }
