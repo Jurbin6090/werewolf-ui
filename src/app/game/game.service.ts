@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
 @Injectable()
-export class GameCreateService {
+export class GameService {
   httpClient
   server = 'http://do.jurbin.com:8080'
 
@@ -10,8 +10,12 @@ export class GameCreateService {
     this.httpClient = httpClient
   }
 
+  getGames(){
+    return this.httpClient.get(this.server + '/game/list')
+  }
+
   createGame(playerId) {
-    this.httpClient.post('localhost:8080/game/' + playerId)
+    this.httpClient.post(this.server + '/games' + playerId)
   }
 
   getPlayers() {
