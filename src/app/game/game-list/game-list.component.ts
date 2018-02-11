@@ -8,7 +8,7 @@ import {GameService} from "../game.service";
 })
 export class GameListComponent implements OnInit {
   gameService
-  games = [{id: "", name: "Justin Durbin"}, {id: "", name: "Michael Smith"}]
+  games = [{id: "", name: ""}, {id: "", name: ""}]
 
   constructor(gameService: GameService) {
     this.gameService = gameService
@@ -25,5 +25,4 @@ export class GameListComponent implements OnInit {
   deleteGame(id){
     this.gameService.deleteGame(id)
   }
-
 }

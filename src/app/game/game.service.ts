@@ -16,7 +16,7 @@ export class GameService {
   }
 
   createGame(playerId) : Observable<any> {
-    return this.httpClient.post(this.server + '/games' + playerId)
+    return this.httpClient.post(this.server + '/game/' + playerId)
   }
 
   getPlayers() : Observable<any>{
