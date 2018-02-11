@@ -19,7 +19,7 @@ export class GameCreateComponent implements OnInit {
     this.gameService.getPlayers().subscribe(response => this.players = response)
   }
 
-  create(){
+  createGame(){
     this.gameService.createGame(this.selectedPlayer.id)
   }
 }

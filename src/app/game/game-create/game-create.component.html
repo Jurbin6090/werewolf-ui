@@ -2,5 +2,5 @@
   <select [(value)]="selectedPlayer">
     <option *ngFor="let player of players" value="player.id">{{player.firstName + ' ' + player.lastName}}</option>
   </select>
-  <button id="createGame()">Create New Game</button>
+  <button (click)="createGame()">Create New Game</button>
 </form>
