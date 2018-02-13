@@ -1,12 +1,14 @@
-<table>
-  <thead>
-    <th>Remove</th>
-    <th>Name</th>
-  </thead>
-  <tbody>
-    <tr *ngFor="let game of games">
-      <td><a (click)=deleteGame(game.id)>X</a></td>
-      <td>{{game.name}}</td>
-    </tr>
-  </tbody>
-</table>
+<form>
+  <table>
+    <thead>
+      <th>Remove</th>
+      <th>Name</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let game of games">
+        <td><button (click)=deleteGame(game.id)>X</button></td>
+        <td>{{game.name}}</td>
+      </tr>
+    </tbody>
+  </table>
+</form>

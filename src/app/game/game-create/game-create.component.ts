@@ -22,6 +22,6 @@ export class GameCreateComponent implements OnInit {
 
   createGame(){
     this.gameService.createGame(this.selectedPlayer)
-      .subscribe(response => console.log('Player added'))
+      .subscribe(response => console.log('Player added: ' + response))
   }
 }

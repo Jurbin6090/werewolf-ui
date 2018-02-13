@@ -19,10 +19,12 @@ export class GameListComponent implements OnInit {
   }
 
   listGames(){
-    this.gameService.getGames().subscribe(response => this.games = response)
+    this.gameService.getGames()
+      .subscribe(response => this.games = response)
   }
 
   deleteGame(id){
     this.gameService.deleteGame(id)
+      .subscribe(response => console.log('Game removed: ' + response))
   }
 }
