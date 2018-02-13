@@ -1,11 +1,11 @@
-<form>
+<form name="createPlayerForm">
   <label>
     First Name
   </label>
-  <input [ngModel]="firstName"/>
+  <input name="firstName" [ngModel]="firstName"/>
   <label>
     First Name
   </label>
-  <input [ngModel]="lastName"/>
+  <input name="lastName" [ngModel]="lastName"/>
   <button (click)="createPlayer()">Create New Player</button>
 </form>
