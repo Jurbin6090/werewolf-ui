@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {CharacterService} from "../character.service";
 
 @Component({
   selector: 'app-character-create',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./character-create.component.css']
 })
 export class CharacterCreateComponent implements OnInit {
+  characterService
 
-  constructor() { }
+  constructor(characterService: CharacterService) {
+    this.characterService = characterService
+  }
 
   ngOnInit() {
   }

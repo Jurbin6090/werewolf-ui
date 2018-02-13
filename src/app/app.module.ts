@@ -11,7 +11,9 @@ import {GameListComponent} from './game/game-list/game-list.component';
 import {GameCreateComponent} from './game/game-create/game-create.component';
 import {GameService} from "./game/game.service";
 import {HttpClientModule} from "@angular/common/http";
-import { FormsModule } from '@angular/forms';
+import {FormsModule} from '@angular/forms';
+import {PlayerService} from "./player/player.service";
+import {CharacterService} from "./character/character.service";
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     FormsModule
   ],
-  providers: [GameCreateComponent, GameService],
+  providers: [GameCreateComponent, GameService, PlayerService, CharacterService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

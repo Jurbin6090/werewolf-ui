@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PlayerService} from "../player.service";
 
 @Component({
   selector: 'app-player-list',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player-list.component.css']
 })
 export class PlayerListComponent implements OnInit {
+  playerService
 
-  constructor() { }
+  constructor(playerService: PlayerService) {
+    this.playerService = playerService
+  }
 
   ngOnInit() {
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {PlayerService} from "../player.service";
 
 @Component({
   selector: 'app-player-create',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player-create.component.css']
 })
 export class PlayerCreateComponent implements OnInit {
+  playerService
 
-  constructor() { }
+  constructor(playerService: PlayerService) {
+    this.playerService = playerService
+  }
 
   ngOnInit() {
   }
