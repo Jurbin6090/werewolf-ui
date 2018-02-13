@@ -5,6 +5,8 @@ import {Observable} from "rxjs/Observable";
 @Injectable()
 export class PlayerService {
   httpClient
+  debug = true
+  server = 'http://do.jurbin.com:8080'
 
   constructor(httpClient: HttpClient) {
     this.httpClient = httpClient
@@ -19,7 +21,7 @@ export class PlayerService {
   createPlayer(firstName, lastName) : Observable<any> {
     if(this.debug)
       console.log(this.server + '/player/create/')
-    return this.httpClient.post(this.server + '/player/create/', {firstName: firstName,lastName: lastName})
+    return this.httpClient.post(this.server + '/player/create', {firstName: firstName,lastName: lastName})
   }
 
   deletePlayer(id){
