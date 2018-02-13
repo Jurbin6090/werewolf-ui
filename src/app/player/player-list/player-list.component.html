@@ -1,3 +1,14 @@
-<p>
-  player-list works!
-</p>
+<form>
+  <table>
+    <thead>
+    <th>Remove</th>
+    <th>Name</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let player of players">
+      <td><button (click)=deletePlayer(player.id)>X</button></td>
+      <td>{{player.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</form>

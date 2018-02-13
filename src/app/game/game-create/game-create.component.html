@@ -1,5 +1,5 @@
-<form name = "createPlayerForm">
-  <select name="createPlayerSelect" placeHolder="Select Player" [(ngModel)]="selectedPlayer">
+<form name = "createGameForm">
+  <select name="createGameSelect" placeHolder="Select Player" [(ngModel)]="selectedPlayer">
     <option *ngFor="let player of players" [value]="player.id">{{player.firstName + ' ' + player.lastName}}</option>
   </select>
   <button (click)="createGame()">Create New Game</button>

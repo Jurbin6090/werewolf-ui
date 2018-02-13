@@ -1,3 +1,11 @@
-<p>
-  player-create works!
-</p>
+<form>
+  <label>
+    First Name
+  </label>
+  <input [ngModel]="firstName"/>
+  <label>
+    First Name
+  </label>
+  <input [ngModel]="lastName"/>
+  <button (click)="createPlayer()">Create New Player</button>
+</form>
