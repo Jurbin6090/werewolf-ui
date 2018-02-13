@@ -11,7 +11,7 @@ import {GameListComponent} from './game/game-list/game-list.component';
 import {GameCreateComponent} from './game/game-create/game-create.component';
 import {GameService} from "./game/game.service";
 import {HttpClientModule} from "@angular/common/http";
-
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +25,8 @@ import {HttpClientModule} from "@angular/common/http";
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [GameCreateComponent, GameService],
   bootstrap: [AppComponent]
