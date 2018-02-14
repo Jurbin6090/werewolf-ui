@@ -16,12 +16,16 @@ export class GameCreateComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.listPlayers()
+  }
+
+  listPlayers(){
     this.gameService.getPlayers()
       .subscribe(response => this.players = response)
   }
 
   createGame(){
     this.gameService.createGame(this.selectedPlayer)
-      .subscribe(response => console.log('Player added: ' + response))
+      .subscribe(response => this.players.push(response))
   }
 }
