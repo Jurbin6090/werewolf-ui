@@ -12,7 +12,7 @@ export class CharacterService {
     this.httpClient = httpClient
   }
 
-  getCharacter() : Observable<any> {
+  getCharacters() : Observable<any> {
     if(this.debug)
       console.log(this.server + '/character/list')
 
