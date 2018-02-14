@@ -1,3 +1,14 @@
-<p>
-  character-list works!
-</p>
+<form>
+  <table>
+    <thead>
+    <th>Remove</th>
+    <th>Name</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let character of characters">
+      <td><button (click)=deleteCharacter(player.id)>X</button></td>
+      <td>{{character.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</form>

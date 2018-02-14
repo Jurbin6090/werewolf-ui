@@ -8,7 +8,7 @@ import {PlayerService} from "../player.service";
 })
 export class PlayerListComponent implements OnInit {
   playerService
-  players = [{"id":"","firstName":"Justin", "lastName":"Durbin","character":null,"wins":0,"losses":0}]
+   players = [{"id":"","firstName":"Justin", "lastName":"Durbin","character":null,"wins":0,"losses":0}]
 
   constructor(playerService: PlayerService) {
     this.playerService = playerService

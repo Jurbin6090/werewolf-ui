@@ -1,3 +1,21 @@
-<p>
-  character-create works!
-</p>
+<form name="createCharacterForm">
+  <label>
+    Name
+  </label>
+  <input name="name" [(ngModel)]="name"/>
+  <label>
+    Description
+  </label>
+  <input name="description" [(ngModel)]="description"/>
+  <label>
+    PowerLevel
+  </label>
+  <input type="number" name="powerLevel" [(ngModel)]="powerLevel"/>
+  <label>
+    Is Villager
+  </label><select name="isVillager" placeHolder="Is Villager" [(ngModel)]="isVillager">
+    <option [value]="true">True</option>
+    <option [value]="false">False</option>
+  </select>
+  <button (click)="createCharacter()">Create New Character</button>
+</form>
