@@ -6,7 +6,7 @@
     </thead>
     <tbody>
     <tr *ngFor="let character of characters">
-      <td><button (click)=deleteCharacter(player.id)>X</button></td>
+      <td><button (click)=deleteCharacter(character.id)>X</button></td>
       <td>{{character.name}}</td>
     </tr>
     </tbody>
