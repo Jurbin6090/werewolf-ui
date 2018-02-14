@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpParams} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 
 @Injectable()
@@ -21,7 +21,9 @@ export class PlayerService {
   createPlayer(firstName, lastName) : Observable<any> {
     if(this.debug)
       console.log(this.server + '/player/create/')
-    return this.httpClient.post(this.server + '/player/create', {firstName: firstName,lastName: lastName})
+    const body = new HttpParams().set('firstName', firstName).set('lastName', lastName);
+    return this.httpClient.post(this.server + '/player/create', body)
+
   }
 
   deletePlayer(id){
