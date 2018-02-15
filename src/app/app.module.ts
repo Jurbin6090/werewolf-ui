@@ -14,6 +14,7 @@ import {HttpClientModule} from "@angular/common/http";
 import {FormsModule} from '@angular/forms';
 import {PlayerService} from "./player/player.service";
 import {CharacterService} from "./character/character.service";
+import {MatButtonModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import {CharacterService} from "./character/character.service";
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatButtonModule
   ],
   providers: [GameCreateComponent, GameService, PlayerService, CharacterService],
   bootstrap: [AppComponent]
